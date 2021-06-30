@@ -1,0 +1,126 @@
+.App {
+  background: url('./images/real.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  font-family: Gilroy-Light,serif;
+}
+
+h1{
+  font-family: Gilroy-ExtraBold,serif;
+  font-size: 36px;
+  color: #23966F;
+  margin-top: 36px;
+}
+
+p{
+  padding-right:5px;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: #0c5a63;
+  font-family: Gilroy-ExtraBold;
+  margin: 0;
+}
+button{
+  --c: #23966F;
+    color: var(--c);
+    font-family: Gilroy-ExtraBold,serif;
+    font-size: large;
+    border: 0.1em solid var(--c);
+    border-radius: 1.2em;
+    width: 10em;
+    height: 3.1em;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin-top: 16px; 
+    cursor: pointer;
+}
+
+button span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--c);
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+button:hover {
+  color: white;
+  background: #142444;
+}
+
+button:hover span {
+  transform: translateY(0) scale(2);
+}
+
+button span:nth-child(1) {
+  --n: 1;
+}
+
+button span:nth-child(2) {
+  --n: 2;
+}
+
+button span:nth-child(3) {
+  --n: 3;
+}
+
+
+button span:nth-child(4) {
+  --n: 4;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+form input{
+  width: 400px;
+  height: 50px;
+  margin: 25px 16px 0px;
+  border: 1px solid #23966F;
+  background: #F3F3F3;
+  border-radius: 25px;
+  font-family: Gilroy-Light,serif;
+  font-size: 18px;
+  padding-left: 27px;
+  outline: none;
+}
+form input:focus { 
+  outline: none !important;
+  border-color: #23966F;
+  box-shadow: 0 0 10px #23966F;
+}
+
+@media only screen and (max-width: 768px){
+  .App{
+    width: 100%;
+    display: flex;
+  }
+  form input{
+    width: 260px;
+    height: 50px;
+    margin: 18px 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  }
+  button{
+    width: 140px;
+    margin-bottom: -10px;
+  }
+}

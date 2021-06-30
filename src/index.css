@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+@media only screen and (max-width: 768px){
+    *{
+        box-sizing: border-box;
+        margin: 0;
+    }
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: local('Gilroy-Bold'), url('./fonts/Gilroy-Bold.ttf') format('truetype');
+            }
+
+@font-face {
+    font-family: 'Gilroy-ExtraBold';
+    src:  url('./fonts/Gilroy-ExtraBold\ 800.ttf') format('truetype');
+            }
+
+@font-face {
+    font-family: 'Gilroy-Light';
+    src: local('Gilroy-Light'), url('./fonts/Gilroy-Light\ 300.ttf') format('truetype');
+            }
